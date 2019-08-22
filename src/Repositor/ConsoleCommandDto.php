@@ -6,7 +6,7 @@ namespace Repositor;
 
 use Webmozart\Assert\Assert;
 
-class Command
+class ConsoleCommandDto
 {
     /**
      * @var string
@@ -24,7 +24,7 @@ class Command
     private $branch;
 
     /**
-     * Command constructor.
+     * ConsoleCommandDto constructor.
      */
     public function __construct(
         string $service,

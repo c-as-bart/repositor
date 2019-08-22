@@ -42,16 +42,16 @@ final class Repositor
         $this->branchResourceFactory = $branchResourceFactory;
     }
 
-    public function getLastCommitHash(Command $command): string
+    public function getLastCommitHash(ConsoleCommandDto $consoleCommandDto): string
     {
         try {
-            $repositoryService = $this->repositoryServiceFactory->build($command->getService());
+            $repositoryService = $this->repositoryServiceFactory->build($consoleCommandDto->getService());
             $uri = $repositoryService->getBranchResource(
-                $command->getRepository(),
-                $command->getBranch()
+                $consoleCommandDto->getRepository(),
+                $consoleCommandDto->getBranch()
             );
             $branchResource = $this->branchResourceFactory->build(
-                $command->getService(),
+                $consoleCommandDto->getService(),
                 $this->httpClient->get($uri)
             );
 
