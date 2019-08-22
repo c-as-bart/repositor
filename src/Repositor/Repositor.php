@@ -46,7 +46,7 @@ final class Repositor
     {
         try {
             $repositoryService = $this->repositoryServiceFactory->build($consoleCommandDto->getService());
-            $uri = $repositoryService->getBranchResource(
+            $uri = $repositoryService->getUriBranchResource(
                 $consoleCommandDto->getRepository(),
                 $consoleCommandDto->getBranch()
             );

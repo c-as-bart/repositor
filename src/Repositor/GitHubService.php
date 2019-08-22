@@ -15,7 +15,7 @@ class GitHubService implements RepositoryServiceInterface
      *
      * @return string
      */
-    public function getBranchResource(string $repository, string $branch): string
+    public function getUriBranchResource(string $repository, string $branch): string
     {
         return self::API_HOST . "/repos/{$repository}/branches/{$branch}";
     }

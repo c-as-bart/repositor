@@ -6,5 +6,5 @@ namespace Repositor;
 
 interface RepositoryServiceInterface
 {
-    public function getBranchResource(string $repository, string $branch);
+    public function getUriBranchResource(string $repository, string $branch): string;
 }
