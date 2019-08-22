@@ -1,0 +1,20 @@
+{
+  "name": "c-as-bart/repositor",
+  "description": "Simple service returning the last commit hash on Github.",
+  "authors": [
+    {
+      "name": "Bartosz Cichecki",
+      "email": "bartcich@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Repositor\\": "src/Repositor"
+    }
+  },
+  "require": {
+    "php": "^7.1.3",
+    "php-curl-class/php-curl-class": "^8.6",
+    "webmozart/assert": "^1.4"
+  }
+}
