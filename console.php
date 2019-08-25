@@ -2,12 +2,12 @@
 
 require_once 'vendor/autoload.php';
 
-use Repositor\BranchResourceFactory;
-use Repositor\ConsoleCommandDto;
-use Repositor\GitHubService;
-use Repositor\HttpClient;
-use Repositor\Repositor;
-use Repositor\RepositoryServiceFactory;
+use App\Repositor\BranchResourceFactory;
+use App\Repositor\ConsoleCommandDto;
+use App\Repositor\GitHubService;
+use App\Repositor\HttpClient;
+use App\Repositor\Repositor;
+use App\Repositor\RepositoryServiceFactory;
 
 $params = getopt(null, [
     "repository:",

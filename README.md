@@ -1,13 +1,13 @@
 # Repositor
 
-Simple service returning the last commit hash on Github.
+Simple app in Symfony, returning the last commit hash on Vsc services.
+Current exist only a GitHub implementation.
 
 ## Example usage
 
 In command line:
-```bash
-./app justinrainbow/json-schema gh-pages
-./app justinrainbow/json-schema gh-pages GitHub
+```
+bin/console repositor:get-last-commit-hash justinrainbow/json-schema gh-pages
 ```
 result:
 ```
