@@ -11,5 +11,5 @@ interface VscServiceFactoryInterface
      *
      * @return VscServiceInterface
      */
-    public function build(string $serviceName): VscServiceInterface;
+    public function createService(string $serviceName): VscServiceInterface;
 }

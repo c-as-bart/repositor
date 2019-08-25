@@ -36,17 +36,17 @@ class GitHubService implements VscServiceInterface
      * @param string $repository
      * @param string $branch
      *
-     * @return BranchResourceInterface
+     * @return string
      */
-    public function getBranchResource(
+    public function getLastCommitHash(
         string $repository,
         string $branch
-    ): BranchResourceInterface {
+    ): string {
         try {
             $uri = "{$this->apiHost}/repos/{$repository}/branches/{$branch}";
-            $result = $this->httpService->get($uri);
+            $result = $this->httpService->get($uri)->toArray();
 
-            return new GitHubBranchResource($result->toArray());
+            return $result['commit']['sha'];
         } catch (Exception $exception) {
             throw new ResourceNotExistException();
         }

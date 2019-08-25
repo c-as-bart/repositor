@@ -28,13 +28,13 @@ class VscServiceFactory implements VscServiceFactoryInterface
      * @return VscServiceInterface
      * @throws ServiceNotSupportException
      */
-    public function build(string $serviceName): VscServiceInterface
+    public function createService(string $serviceName): VscServiceInterface
     {
         switch ($serviceName) {
             case GitHubService::NAME:
                 return new GitHubService($this->httpService);
             default:
-                throw new ServiceNotSupportException("Service {$serviceName} not support.");
+                throw new ServiceNotSupportException("Application {$serviceName} not support.");
         }
     }
 }

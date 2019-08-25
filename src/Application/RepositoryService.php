@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\Service;
+namespace App\Application;
 
 use App\Infrastructure\VscService\VscServiceFactoryInterface;
-use App\Service\Dto\GetLastCommitParams;
+use App\Application\Dto\GetLastCommitParams;
 
 class RepositoryService implements RepositoryServiceInterface
 {
@@ -29,12 +29,11 @@ class RepositoryService implements RepositoryServiceInterface
      */
     public function getLastCommitHash(GetLastCommitParams $params): string
     {
-        $service = $this->vscServiceFactory->build($params->getService());
-        $resource = $service->getBranchResource(
+        $service = $this->vscServiceFactory->createService($params->getService());
+
+        return $service->getLastCommitHash(
             $params->getRepository(),
             $params->getBranch()
         );
-
-        return $resource->getLastCommitHash();
     }
 }

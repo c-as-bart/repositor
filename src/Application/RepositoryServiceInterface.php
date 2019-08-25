@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Service;
+namespace App\Application;
 
-use App\Service\Dto\GetLastCommitParams;
+use App\Application\Dto\GetLastCommitParams;
 
 interface RepositoryServiceInterface
 {

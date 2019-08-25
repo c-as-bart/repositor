@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Service\Dto;
+namespace App\Application\Dto;
 
 use App\Infrastructure\VscService\GitHubService;
 
