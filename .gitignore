@@ -1,5 +1,11 @@
 .DS_Store
 .idea/
-build
 composer.lock
-vendor
+###> symfony/framework-bundle ###
+/.env.local
+/.env.local.php
+/.env.*.local
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
